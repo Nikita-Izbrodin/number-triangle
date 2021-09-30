@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
 import  java.util.Scanner;
 
 public class Main {
@@ -10,13 +9,20 @@ public class Main {
         System.out.println("Enter a number:");
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
-        System.out.println(number);
+        //System.out.println(number);
 
         String tempNum = "";
 
-        for (int i = 0; i < number; ++i) {
-            //System.out.println(i);
+        for (int i = 1; i < number + 1; i++) {
             tempNum +=i;
+            System.out.println(tempNum);
+        }
+
+        for (int  i = number; i > 1; i--) {
+            tempNum = "";
+            for (int j = 1; j < i; j++){
+                tempNum += j;
+            }
             System.out.println(tempNum);
         }
     }
